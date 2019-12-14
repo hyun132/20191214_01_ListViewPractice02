@@ -18,7 +18,10 @@ class GameAdapter(context: Context, resId : Int , list:ArrayList<GameData>): Arr
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var tempRow = convertView
-        if(tempRow == null){
+
+
+        // tempRow가 null이면 let이하의 내용을  실행해라
+        tempRow?.let {
             tempRow = inf.inflate(R.layout.game_list_item,null)
         }
 
